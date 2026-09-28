@@ -1,0 +1,14 @@
+dev/
+.venv/
+pycache
+*.pyc
+
+mlflow.db
+mlruns/
+mlartifacts/
+
+.env
+.csv
+.dist
+.vscode
+.DS_Store
