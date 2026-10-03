@@ -55,7 +55,7 @@ jobs:
               --name house-price-prediction \
               -p 8000:8000 \
               --add-host=host.docker.internal:host-gateway \
-              -e MLFLOW_TRACKING=http://host.docker.internal:5000 \
+              -e MLFLOW_TRACKING=http://13.49.17.201:5000 \
               ${{ secrets.DOCKERHUB_USERNAME }}/house-price-prediction:latest
 
             sleep 5
