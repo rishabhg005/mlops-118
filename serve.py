@@ -11,7 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel , Field
 
 BASE_DIR=Path(__file__).resolve().parent
-TRACKING_URI=os.getenv("MLFLOW_TRACKING","http://127.0.0.1:5000")
+TRACKING_URI=os.getenv("MLFLOW_TRACKING","http://host.docker.internal:5000")
 MODEL_URI= "models:/house-price-predictor@champion"
 FEATURES=["sqft","bedrooms","bathrooms","age_years","garage","location_score"]
 
