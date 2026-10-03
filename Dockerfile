@@ -17,7 +17,7 @@ COPY static ./static
 EXPOSE 8000
 
 # Default MLflow URL
-ENV MLFLOW_TRACKING=http://host.docker.internal:5000
+ENV MLFLOW_TRACKING=http://127.0.0.1:5000
 
 # Start FastAPI
 CMD ["uvicorn", "serve:app", "--host", "0.0.0.0", "--port", "8000"]
