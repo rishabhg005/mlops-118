@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 dev/
 .venv/
 pycache
+=======
+rishabh/
+__pycache__
+>>>>>>> 85e5ec2 (update-code)
 *.pyc
 
 mlflow.db
@@ -11,4 +16,9 @@ mlartifacts/
 .csv
 .dist
 .vscode
+<<<<<<< HEAD
 .DS_Store
+=======
+.DS_Store
+mlops-118/
+>>>>>>> 85e5ec2 (update-code)

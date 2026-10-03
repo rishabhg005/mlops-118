@@ -12,6 +12,9 @@ import numpy as np
 s3=boto3.client('s3')
 BUCKET="mlops-house-prediction"
 KEY="proccessed/2026-09-25/Mlops_house_predication_clean_v1.csv"
+BUCKET="mlops-house-prediction1"
+KEY="proccessed/2026-09-30/Mlops_house_prediction_clean_v1.csv"
+
 
 def fectch_data():
     obj=s3.get_object(Bucket=BUCKET,Key=KEY)
@@ -27,6 +30,7 @@ y=df['price']
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=42)
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
 mlflow.set_experiment("mlops-house-prediction1")
+mlflow.set_experiment("mlops-house-prediction")
 
 with mlflow.start_run():
     n_estimators=150
@@ -58,6 +62,4 @@ with mlflow.start_run():
     )
     
     print(f"\n MAE: {mae:.2f} | RMSE: {rmse:.2f} | R2: {r2:.4f}")
-    
-    
     
